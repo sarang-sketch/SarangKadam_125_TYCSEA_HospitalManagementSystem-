@@ -1,0 +1,65 @@
+# ============================================
+# Hospital Management System - Requirements
+# ============================================
+# Student: Sarang Kadam
+# Roll No: 125
+# Class: TY CSE (A)
+# Project: Hospital Management System
+# Subject: Database Management System
+# ============================================
+
+# SERVER REQUIREMENTS
+# -------------------
+Apache >= 2.4
+PHP >= 8.0
+MySQL >= 5.7 OR MariaDB >= 10.3
+
+# PHP EXTENSIONS REQUIRED
+# -----------------------
+php-mysqli
+php-pdo
+php-pdo_mysql
+php-session
+php-json
+php-fileinfo
+
+# RECOMMENDED ENVIRONMENT
+# -----------------------
+# XAMPP (Windows/Mac/Linux)
+# Download: https://www.apachefriends.org/
+# Includes: Apache, MySQL, PHP, phpMyAdmin
+
+# FRONTEND DEPENDENCIES (CDN - No Installation Required)
+# ------------------------------------------------------
+# Bootstrap 5.3.2
+# Font Awesome 6.4.2
+
+# DATABASE CONFIGURATION
+# ----------------------
+# Host: localhost
+# User: root
+# Password: (empty for XAMPP default)
+# Database: hospital_management
+
+# BROWSER COMPATIBILITY
+# ---------------------
+# Google Chrome (latest)
+# Mozilla Firefox (latest)
+# Microsoft Edge (latest)
+# Safari (latest)
+
+# INSTALLATION STEPS
+# ------------------
+# 1. Install XAMPP
+# 2. Start Apache and MySQL
+# 3. Copy project to C:\xampp\htdocs\
+# 4. Import db.sql via phpMyAdmin
+# 5. Access: http://localhost/SarangKadam_125_TYCSEA_HospitalManagementSystem
+
+# DEFAULT LOGIN
+# -------------
+# Admin: admin@hospital.com / Admin@123
+
+# ============================================
+# GitHub: https://github.com/Khan-M-Hina/Database-Managment-System.git
+# ============================================
