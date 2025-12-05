@@ -1,52 +1,56 @@
 # 🏥 Hospital Management System
 
+<div align="center">
+
+![Hospital Management System](https://img.shields.io/badge/Hospital-Management%20System-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xOSAzSDVjLTEuMSAwLTIgLjktMiAydjE0YzAgMS4xLjkgMiAyIDJoMTRjMS4xIDAgMi0uOSAyLTJWNWMwLTEuMS0uOS0yLTItMnptLTIgMTBoLTR2NGgtMnYtNEg3di0yaDRWN2gydjRoNHYyeiIvPjwvc3ZnPg==)
+![PHP](https://img.shields.io/badge/PHP-8.0+-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-5.7+-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+**A comprehensive web-based Hospital Management System built with PHP and MySQL**
+
+[Features](#-features) • [Installation](#-installation) • [Database Design](#-database-design) • [ER Diagram](#-er-diagram) • [Documentation](#-documentation)
+
+</div>
+
+---
+
 ## 📋 Project Information
 
 | Field | Details |
-|-------|---------|
+|:------|:--------|
 | **Student Name** | Sarang Kadam |
 | **Roll No** | 125 |
 | **Class** | TY CSE (A) |
 | **Project Title** | Hospital Management System |
 | **Subject** | Database Management System |
-| **GitHub Link** | https://github.com/sarang-sketch/SarangKadam_125_TYCSEA_HospitalManagementSystem-.git |
-
----
-
-## 📖 Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [Features](#features)
-3. [Technology Stack](#technology-stack)
-4. [Database Design](#database-design)
-5. [ER Diagram](#er-diagram)
-6. [Schema Diagram](#schema-diagram)
-7. [Normalization](#normalization)
-8. [Setup Instructions](#setup-instructions)
-9. [Usage Guide](#usage-guide)
-10. [Project Structure](#project-structure)
+| **GitHub** | [Repository Link](https://github.com/sarang-sketch/SarangKadam_125_TYCSEA_HospitalManagementSystem) |
 
 ---
 
 ## 🎯 Project Overview
 
-The Hospital Management System (HMS) is a comprehensive web-based application designed to streamline hospital operations. Built using PHP and MySQL, it provides role-based access control for different hospital staff members and manages all aspects of hospital administration including patient records, appointments, admissions, prescriptions, lab tests, billing, and pharmacy inventory.
+The Hospital Management System (HMS) is a comprehensive web-based application designed to streamline hospital operations. Built using PHP and MySQL, it provides role-based access control for different hospital staff members and manages all aspects of hospital administration.
 
-### Objectives
-- Automate hospital administrative processes
-- Maintain accurate patient records
-- Streamline appointment scheduling
-- Manage billing and payments efficiently
-- Track medicine inventory
-- Generate reports for management
+### Key Features
+
+- 👥 **Patient Records Management** - Complete patient registration and history
+- 📅 **Appointment Scheduling** - Book, reschedule, and manage appointments
+- 🏥 **IPD/Admission Management** - Ward allocation and discharge management
+- 💊 **Prescription & Pharmacy** - Digital prescriptions and inventory tracking
+- 🔬 **Laboratory Tests** - Test requests and result management
+- 💰 **Billing & Invoicing** - Itemized billing with tax calculation
+- 🛏️ **Ward & Bed Management** - Real-time bed availability tracking
 
 ---
 
 ## ✨ Features
 
-### 👥 User Roles & Authentication
-| Role | Access Level |
-|------|--------------|
+### 👤 Role-Based Access Control
+
+| Role | Access & Permissions |
+|:-----|:---------------------|
 | **Admin** | Full system access, user & ward management |
 | **Doctor** | Appointments, prescriptions, lab requests |
 | **Nurse** | Patient care, admission notes |
@@ -54,49 +58,40 @@ The Hospital Management System (HMS) is a comprehensive web-based application de
 | **Lab Technician** | Test results, report uploads |
 | **Pharmacist** | Prescription dispensing, inventory |
 
-### 📦 Core Modules
-- ✅ **Patient Management** - Registration, Search, Medical History
-- ✅ **Appointment Booking** - Schedule, Reschedule, Cancel
-- ✅ **IPD Management** - Admissions, Ward/Bed Allocation, Discharge
-- ✅ **Prescription System** - Create, Print, Track Dispensing
-- ✅ **Lab Tests** - Request, Results Entry, PDF Uploads
-- ✅ **Billing** - Itemized Bills, Tax Calculation, Invoices
-- ✅ **Pharmacy** - Medicine Inventory, Stock Alerts
-- ✅ **Ward Management** - Bed Availability Tracking
-
 ### 🔒 Security Features
-- Password hashing using bcrypt
-- SQL injection prevention (prepared statements)
-- XSS protection (output escaping)
-- Session-based authentication
-- Role-based access control
+
+- 🔐 Password hashing using bcrypt
+- 🛡️ SQL injection prevention (prepared statements)
+- 🔒 XSS protection (output escaping)
+- 🔑 Session-based authentication
+- 👮 Role-based access control
 
 ---
 
 ## 🛠️ Technology Stack
 
 | Component | Technology |
-|-----------|------------|
+|:----------|:-----------|
 | **Backend** | PHP 8.0+ |
 | **Database** | MySQL 5.7+ / MariaDB |
 | **Frontend** | HTML5, CSS3, JavaScript |
 | **UI Framework** | Bootstrap 5.3 |
 | **Icons** | Font Awesome 6 |
-| **Server** | Apache (XAMPP) |
+| **Server** | Apache (XAMPP/WAMP/LAMP) |
 
 ---
 
-## 🗄️ Database Design
+## 📊 Database Design
 
 ### Database Tables (11 Tables)
 
 | # | Table Name | Description | Primary Key |
-|---|------------|-------------|-------------|
+|:-:|:-----------|:------------|:-----------:|
 | 1 | `users` | System users with roles | id |
 | 2 | `patients` | Patient records | id |
-| 3 | `appointments` | Scheduled appointments | id |
-| 4 | `admissions` | IPD admissions | id |
-| 5 | `wards` | Hospital wards | id |
+| 3 | `wards` | Hospital wards | id |
+| 4 | `appointments` | Scheduled appointments | id |
+| 5 | `admissions` | IPD admissions | id |
 | 6 | `prescriptions` | Doctor prescriptions | id |
 | 7 | `prescription_items` | Medicines in prescriptions | id |
 | 8 | `lab_tests` | Lab test requests & results | id |
@@ -104,177 +99,32 @@ The Hospital Management System (HMS) is a comprehensive web-based application de
 | 10 | `bill_items` | Itemized charges | id |
 | 11 | `medicines` | Pharmacy inventory | id |
 
-### Table Structures
-
-#### 1. Users Table
-```sql
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    password_hash VARCHAR(255) NOT NULL,
-    role ENUM('admin','doctor','nurse','receptionist','lab','pharmacist') NOT NULL,
-    phone VARCHAR(20),
-    department VARCHAR(50),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
-
-#### 2. Patients Table
-```sql
-CREATE TABLE patients (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    patient_code VARCHAR(20) NOT NULL UNIQUE,
-    name VARCHAR(100) NOT NULL,
-    age INT NOT NULL,
-    gender ENUM('male','female','other') NOT NULL,
-    blood_group VARCHAR(5),
-    phone VARCHAR(20) NOT NULL,
-    address TEXT,
-    emergency_contact VARCHAR(100),
-    medical_history TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
-
-#### 3. Appointments Table
-```sql
-CREATE TABLE appointments (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    patient_id INT NOT NULL,
-    doctor_id INT NOT NULL,
-    appointment_date DATE NOT NULL,
-    appointment_time TIME NOT NULL,
-    department VARCHAR(50),
-    status ENUM('pending','completed','cancelled') DEFAULT 'pending',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (patient_id) REFERENCES patients(id),
-    FOREIGN KEY (doctor_id) REFERENCES users(id)
-);
-```
-
-#### 4. Admissions Table
-```sql
-CREATE TABLE admissions (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    patient_id INT NOT NULL,
-    doctor_id INT NOT NULL,
-    ward_id INT NOT NULL,
-    bed_number VARCHAR(10) NOT NULL,
-    admission_date DATETIME NOT NULL,
-    discharge_date DATETIME,
-    diagnosis TEXT,
-    notes TEXT,
-    status ENUM('admitted','discharged') DEFAULT 'admitted',
-    FOREIGN KEY (patient_id) REFERENCES patients(id),
-    FOREIGN KEY (doctor_id) REFERENCES users(id),
-    FOREIGN KEY (ward_id) REFERENCES wards(id)
-);
-```
-
-#### 5. Wards Table
-```sql
-CREATE TABLE wards (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    ward_name VARCHAR(50) NOT NULL,
-    total_beds INT NOT NULL DEFAULT 0,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
-
-#### 6. Prescriptions Table
-```sql
-CREATE TABLE prescriptions (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    patient_id INT NOT NULL,
-    doctor_id INT NOT NULL,
-    visit_date DATE NOT NULL,
-    symptoms TEXT,
-    diagnosis TEXT,
-    advice TEXT,
-    status ENUM('pending','dispensed') DEFAULT 'pending',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (patient_id) REFERENCES patients(id),
-    FOREIGN KEY (doctor_id) REFERENCES users(id)
-);
-```
-
-#### 7. Prescription Items Table
-```sql
-CREATE TABLE prescription_items (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    prescription_id INT NOT NULL,
-    medicine_name VARCHAR(100) NOT NULL,
-    dosage VARCHAR(50),
-    frequency VARCHAR(50),
-    duration VARCHAR(50),
-    FOREIGN KEY (prescription_id) REFERENCES prescriptions(id)
-);
-```
-
-#### 8. Lab Tests Table
-```sql
-CREATE TABLE lab_tests (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    patient_id INT NOT NULL,
-    doctor_id INT NOT NULL,
-    test_name VARCHAR(100) NOT NULL,
-    requested_date DATE NOT NULL,
-    result_date DATE,
-    result TEXT,
-    report_file VARCHAR(255),
-    status ENUM('requested','in-progress','completed') DEFAULT 'requested',
-    FOREIGN KEY (patient_id) REFERENCES patients(id),
-    FOREIGN KEY (doctor_id) REFERENCES users(id)
-);
-```
-
-#### 9. Bills Table
-```sql
-CREATE TABLE bills (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    patient_id INT NOT NULL,
-    admission_id INT,
-    total_amount DECIMAL(10,2) NOT NULL DEFAULT 0,
-    tax_amount DECIMAL(10,2) DEFAULT 0,
-    status ENUM('paid','unpaid') DEFAULT 'unpaid',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (patient_id) REFERENCES patients(id),
-    FOREIGN KEY (admission_id) REFERENCES admissions(id)
-);
-```
-
-#### 10. Bill Items Table
-```sql
-CREATE TABLE bill_items (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    bill_id INT NOT NULL,
-    description VARCHAR(255) NOT NULL,
-    amount DECIMAL(10,2) NOT NULL,
-    FOREIGN KEY (bill_id) REFERENCES bills(id)
-);
-```
-
-#### 11. Medicines Table
-```sql
-CREATE TABLE medicines (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    batch_no VARCHAR(50),
-    quantity INT NOT NULL DEFAULT 0,
-    expiry_date DATE,
-    purchase_price DECIMAL(10,2),
-    selling_price DECIMAL(10,2),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
-
 ---
 
-## 📊 ER Diagram
+## 📐 ER Diagram
+
+### Complete Entity Relationship Diagram
 
 ```mermaid
 erDiagram
+    USERS ||--o{ APPOINTMENTS : "doctor_attends"
+    USERS ||--o{ ADMISSIONS : "doctor_manages"
+    USERS ||--o{ PRESCRIPTIONS : "doctor_writes"
+    USERS ||--o{ LAB_TESTS : "doctor_requests"
+    
+    PATIENTS ||--o{ APPOINTMENTS : "schedules"
+    PATIENTS ||--o{ ADMISSIONS : "admitted_as"
+    PATIENTS ||--o{ PRESCRIPTIONS : "receives"
+    PATIENTS ||--o{ LAB_TESTS : "undergoes"
+    PATIENTS ||--o{ BILLS : "billed_to"
+    
+    WARDS ||--o{ ADMISSIONS : "contains"
+    
+    PRESCRIPTIONS ||--o{ PRESCRIPTION_ITEMS : "includes"
+    
+    BILLS ||--o{ BILL_ITEMS : "contains"
+    ADMISSIONS ||--o| BILLS : "generates"
+
     USERS {
         int id PK
         varchar name
@@ -300,6 +150,13 @@ erDiagram
         timestamp created_at
     }
     
+    WARDS {
+        int id PK
+        varchar ward_name
+        int total_beds
+        timestamp created_at
+    }
+    
     APPOINTMENTS {
         int id PK
         int patient_id FK
@@ -322,13 +179,6 @@ erDiagram
         text diagnosis
         text notes
         enum status
-    }
-    
-    WARDS {
-        int id PK
-        varchar ward_name
-        int total_beds
-        timestamp created_at
     }
     
     PRESCRIPTIONS {
@@ -391,246 +241,358 @@ erDiagram
         decimal selling_price
         timestamp created_at
     }
-
-    USERS ||--o{ APPOINTMENTS : "doctor treats"
-    PATIENTS ||--o{ APPOINTMENTS : "has"
-    USERS ||--o{ ADMISSIONS : "doctor manages"
-    PATIENTS ||--o{ ADMISSIONS : "has"
-    WARDS ||--o{ ADMISSIONS : "contains"
-    USERS ||--o{ PRESCRIPTIONS : "doctor writes"
-    PATIENTS ||--o{ PRESCRIPTIONS : "receives"
-    PRESCRIPTIONS ||--o{ PRESCRIPTION_ITEMS : "contains"
-    USERS ||--o{ LAB_TESTS : "doctor requests"
-    PATIENTS ||--o{ LAB_TESTS : "undergoes"
-    PATIENTS ||--o{ BILLS : "pays"
-    ADMISSIONS ||--o| BILLS : "generates"
-    BILLS ||--o{ BILL_ITEMS : "contains"
 ```
 
 ---
 
-## 📐 Schema Diagram
+## 🔗 Entity Relationships
+
+| Parent Entity | Child Entity | Relationship | Description |
+|:--------------|:-------------|:-------------|:------------|
+| `USERS` | `APPOINTMENTS` | 1:N | One doctor has many appointments |
+| `USERS` | `ADMISSIONS` | 1:N | One doctor manages many admissions |
+| `USERS` | `PRESCRIPTIONS` | 1:N | One doctor writes many prescriptions |
+| `USERS` | `LAB_TESTS` | 1:N | One doctor requests many lab tests |
+| `PATIENTS` | `APPOINTMENTS` | 1:N | One patient has many appointments |
+| `PATIENTS` | `ADMISSIONS` | 1:N | One patient can have many admissions |
+| `PATIENTS` | `PRESCRIPTIONS` | 1:N | One patient receives many prescriptions |
+| `PATIENTS` | `LAB_TESTS` | 1:N | One patient undergoes many lab tests |
+| `PATIENTS` | `BILLS` | 1:N | One patient has many bills |
+| `WARDS` | `ADMISSIONS` | 1:N | One ward contains many admissions |
+| `PRESCRIPTIONS` | `PRESCRIPTION_ITEMS` | 1:N | One prescription has many items |
+| `BILLS` | `BILL_ITEMS` | 1:N | One bill has many items |
+| `ADMISSIONS` | `BILLS` | 1:1 | One admission generates one bill |
+
+---
+
+## 📐 Relational Schema Diagram
+
+```mermaid
+classDiagram
+    direction TB
+    
+    class users {
+        +id : INT [PK]
+        +name : VARCHAR(100)
+        +email : VARCHAR(100) [UK]
+        +password_hash : VARCHAR(255)
+        +role : ENUM
+        +phone : VARCHAR(20)
+        +department : VARCHAR(50)
+        +created_at : TIMESTAMP
+    }
+
+    class patients {
+        +id : INT [PK]
+        +patient_code : VARCHAR(20) [UK]
+        +name : VARCHAR(100)
+        +age : INT
+        +gender : ENUM
+        +blood_group : VARCHAR(5)
+        +phone : VARCHAR(20)
+        +address : TEXT
+        +emergency_contact : VARCHAR(100)
+        +medical_history : TEXT
+        +created_at : TIMESTAMP
+    }
+
+    class wards {
+        +id : INT [PK]
+        +ward_name : VARCHAR(50)
+        +total_beds : INT
+        +created_at : TIMESTAMP
+    }
+
+    class appointments {
+        +id : INT [PK]
+        +patient_id : INT [FK]
+        +doctor_id : INT [FK]
+        +appointment_date : DATE
+        +appointment_time : TIME
+        +department : VARCHAR(50)
+        +status : ENUM
+        +created_at : TIMESTAMP
+    }
+
+    class admissions {
+        +id : INT [PK]
+        +patient_id : INT [FK]
+        +doctor_id : INT [FK]
+        +ward_id : INT [FK]
+        +bed_number : VARCHAR(10)
+        +admission_date : DATETIME
+        +discharge_date : DATETIME
+        +diagnosis : TEXT
+        +notes : TEXT
+        +status : ENUM
+    }
+
+    class prescriptions {
+        +id : INT [PK]
+        +patient_id : INT [FK]
+        +doctor_id : INT [FK]
+        +visit_date : DATE
+        +symptoms : TEXT
+        +diagnosis : TEXT
+        +advice : TEXT
+        +status : ENUM
+        +created_at : TIMESTAMP
+    }
+
+    class prescription_items {
+        +id : INT [PK]
+        +prescription_id : INT [FK]
+        +medicine_name : VARCHAR(100)
+        +dosage : VARCHAR(50)
+        +frequency : VARCHAR(50)
+        +duration : VARCHAR(50)
+    }
+
+    class lab_tests {
+        +id : INT [PK]
+        +patient_id : INT [FK]
+        +doctor_id : INT [FK]
+        +test_name : VARCHAR(100)
+        +requested_date : DATE
+        +result_date : DATE
+        +result : TEXT
+        +report_file : VARCHAR(255)
+        +status : ENUM
+    }
+
+    class bills {
+        +id : INT [PK]
+        +patient_id : INT [FK]
+        +admission_id : INT [FK]
+        +total_amount : DECIMAL
+        +tax_amount : DECIMAL
+        +status : ENUM
+        +created_at : TIMESTAMP
+    }
+
+    class bill_items {
+        +id : INT [PK]
+        +bill_id : INT [FK]
+        +description : VARCHAR(255)
+        +amount : DECIMAL
+    }
+
+    class medicines {
+        +id : INT [PK]
+        +name : VARCHAR(100)
+        +batch_no : VARCHAR(50)
+        +quantity : INT
+        +expiry_date : DATE
+        +purchase_price : DECIMAL
+        +selling_price : DECIMAL
+        +created_at : TIMESTAMP
+    }
+
+    users "1" --> "*" appointments : doctor_id
+    users "1" --> "*" admissions : doctor_id
+    users "1" --> "*" prescriptions : doctor_id
+    users "1" --> "*" lab_tests : doctor_id
+    patients "1" --> "*" appointments : patient_id
+    patients "1" --> "*" admissions : patient_id
+    patients "1" --> "*" prescriptions : patient_id
+    patients "1" --> "*" lab_tests : patient_id
+    patients "1" --> "*" bills : patient_id
+    wards "1" --> "*" admissions : ward_id
+    prescriptions "1" --> "*" prescription_items : prescription_id
+    bills "1" --> "*" bill_items : bill_id
+    admissions "1" --> "0..1" bills : admission_id
+```
+
+---
+
+## 🔄 Data Flow Diagram
+
+### Level 0 - Context Diagram
 
 ```mermaid
 flowchart TB
-    subgraph Core["🏥 Core Entities"]
-        USERS["<b>USERS</b><br/>id, name, email, password_hash,<br/>role, phone, department, created_at"]
-        PATIENTS["<b>PATIENTS</b><br/>id, patient_code, name, age, gender,<br/>blood_group, phone, address,<br/>emergency_contact, medical_history"]
-        WARDS["<b>WARDS</b><br/>id, ward_name, total_beds"]
-    end
-    
-    subgraph Clinical["💊 Clinical Operations"]
-        APPOINTMENTS["<b>APPOINTMENTS</b><br/>id, patient_id, doctor_id,<br/>date, time, department, status"]
-        ADMISSIONS["<b>ADMISSIONS</b><br/>id, patient_id, doctor_id, ward_id,<br/>bed_number, admission_date,<br/>discharge_date, diagnosis, status"]
-        PRESCRIPTIONS["<b>PRESCRIPTIONS</b><br/>id, patient_id, doctor_id,<br/>visit_date, symptoms,<br/>diagnosis, advice, status"]
-        PRESCRIPTION_ITEMS["<b>PRESCRIPTION_ITEMS</b><br/>id, prescription_id, medicine_name,<br/>dosage, frequency, duration"]
-        LAB_TESTS["<b>LAB_TESTS</b><br/>id, patient_id, doctor_id,<br/>test_name, requested_date,<br/>result_date, result, status"]
-    end
-    
-    subgraph Financial["💰 Financial"]
-        BILLS["<b>BILLS</b><br/>id, patient_id, admission_id,<br/>total_amount, tax_amount, status"]
-        BILL_ITEMS["<b>BILL_ITEMS</b><br/>id, bill_id, description, amount"]
-    end
-    
-    subgraph Inventory["📦 Inventory"]
-        MEDICINES["<b>MEDICINES</b><br/>id, name, batch_no, quantity,<br/>expiry_date, purchase_price,<br/>selling_price"]
-    end
-    
-    USERS -->|doctor_id| APPOINTMENTS
-    USERS -->|doctor_id| ADMISSIONS
-    USERS -->|doctor_id| PRESCRIPTIONS
-    USERS -->|doctor_id| LAB_TESTS
-    
-    PATIENTS -->|patient_id| APPOINTMENTS
-    PATIENTS -->|patient_id| ADMISSIONS
-    PATIENTS -->|patient_id| PRESCRIPTIONS
-    PATIENTS -->|patient_id| LAB_TESTS
-    PATIENTS -->|patient_id| BILLS
-    
-    WARDS -->|ward_id| ADMISSIONS
-    ADMISSIONS -->|admission_id| BILLS
-    
-    PRESCRIPTIONS -->|prescription_id| PRESCRIPTION_ITEMS
-    BILLS -->|bill_id| BILL_ITEMS
-```
-
-### Relational Schema Notation
-
-```
-USERS (id, name, email, password_hash, role, phone, department, created_at)
-PATIENTS (id, patient_code, name, age, gender, blood_group, phone, address, emergency_contact, medical_history, created_at)
-WARDS (id, ward_name, total_beds, created_at)
-APPOINTMENTS (id, patient_id*, doctor_id*, appointment_date, appointment_time, department, status, created_at)
-ADMISSIONS (id, patient_id*, doctor_id*, ward_id*, bed_number, admission_date, discharge_date, diagnosis, notes, status)
-PRESCRIPTIONS (id, patient_id*, doctor_id*, visit_date, symptoms, diagnosis, advice, status, created_at)
-PRESCRIPTION_ITEMS (id, prescription_id*, medicine_name, dosage, frequency, duration)
-LAB_TESTS (id, patient_id*, doctor_id*, test_name, requested_date, result_date, result, report_file, status)
-BILLS (id, patient_id*, admission_id*, total_amount, tax_amount, status, created_at)
-BILL_ITEMS (id, bill_id*, description, amount)
-MEDICINES (id, name, batch_no, quantity, expiry_date, purchase_price, selling_price, created_at)
-
-Note: * denotes Foreign Key
-```
-
----
-
-## � Darta Flow Diagram
-
-```mermaid
-flowchart LR
     subgraph External["External Entities"]
         P[("👤 Patient")]
         D[("👨‍⚕️ Doctor")]
-        A[("👨‍💼 Admin")]
+        N[("👩‍⚕️ Nurse")]
         R[("💁 Receptionist")]
         L[("🔬 Lab Tech")]
         PH[("💊 Pharmacist")]
+        A[("👨‍💼 Admin")]
     end
     
     subgraph HMS["🏥 Hospital Management System"]
-        direction TB
-        AUTH["1.0<br/>Authentication"]
-        PM["2.0<br/>Patient<br/>Management"]
-        APT["3.0<br/>Appointment<br/>Scheduling"]
-        ADM["4.0<br/>Admission<br/>Management"]
-        RX["5.0<br/>Prescription<br/>Management"]
-        LAB["6.0<br/>Lab Test<br/>Management"]
-        BILL["7.0<br/>Billing<br/>System"]
-        INV["8.0<br/>Inventory<br/>Management"]
+        PM["Patient\nManagement"]
+        AM["Appointment\nManagement"]
+        ADM["Admission\nManagement"]
+        PRE["Prescription\nManagement"]
+        LAB["Lab Test\nManagement"]
+        BIL["Billing\nManagement"]
+        INV["Inventory\nManagement"]
+        USR["User\nManagement"]
     end
     
-    subgraph DataStores["Data Stores"]
-        DS1[("D1: Users")]
-        DS2[("D2: Patients")]
-        DS3[("D3: Appointments")]
-        DS4[("D4: Admissions")]
-        DS5[("D5: Prescriptions")]
-        DS6[("D6: Lab Tests")]
-        DS7[("D7: Bills")]
-        DS8[("D8: Medicines")]
-    end
-    
-    P -->|Registration| PM
-    R -->|Register Patient| PM
-    PM -->|Patient Data| DS2
-    
-    R -->|Book Appointment| APT
-    D -->|View Schedule| APT
-    APT -->|Appointment Data| DS3
-    
-    R -->|Admit Patient| ADM
-    ADM -->|Admission Data| DS4
-    
-    D -->|Create Prescription| RX
-    RX -->|Prescription Data| DS5
-    
-    D -->|Request Test| LAB
-    L -->|Enter Results| LAB
-    LAB -->|Test Data| DS6
-    
-    R -->|Generate Bill| BILL
-    BILL -->|Bill Data| DS7
-    
-    PH -->|Update Stock| INV
-    INV -->|Medicine Data| DS8
-    
-    A -->|Manage Users| AUTH
-    AUTH -->|User Data| DS1
+    P -->|"Registration"| PM
+    P -->|"Book Appointment"| AM
+    R -->|"Register Patient"| PM
+    R -->|"Schedule"| AM
+    R -->|"Generate Bill"| BIL
+    D -->|"View Appointments"| AM
+    D -->|"Write Prescription"| PRE
+    D -->|"Request Tests"| LAB
+    D -->|"Admit Patient"| ADM
+    N -->|"Update Notes"| ADM
+    L -->|"Enter Results"| LAB
+    PH -->|"Dispense Medicine"| PRE
+    PH -->|"Update Stock"| INV
+    A -->|"Manage Users"| USR
+    A -->|"Manage Wards"| ADM
 ```
 
 ---
 
 ## 📏 Normalization
 
-### First Normal Form (1NF)
-- All tables have primary keys
-- All attributes contain atomic values
-- No repeating groups
+### Normalization Status
 
-### Second Normal Form (2NF)
-- All tables are in 1NF
-- All non-key attributes are fully dependent on the primary key
-- No partial dependencies
-
-### Third Normal Form (3NF)
-- All tables are in 2NF
-- No transitive dependencies
-- All non-key attributes depend only on the primary key
+| Normal Form | Status | Description |
+|:------------|:------:|:------------|
+| **1NF** | ✅ | All tables have primary keys, atomic values, no repeating groups |
+| **2NF** | ✅ | All non-key attributes fully depend on primary key |
+| **3NF** | ✅ | No transitive dependencies exist |
+| **BCNF** | ✅ | Every determinant is a candidate key |
 
 ### Functional Dependencies
 
+| Table | Functional Dependencies |
+|:------|:------------------------|
+| `users` | id → name, email, password_hash, role, phone, department |
+| `patients` | id → patient_code, name, age, gender, blood_group, phone, address |
+| `appointments` | id → patient_id, doctor_id, appointment_date, appointment_time, status |
+| `admissions` | id → patient_id, doctor_id, ward_id, bed_number, dates, diagnosis |
+| `prescriptions` | id → patient_id, doctor_id, visit_date, symptoms, diagnosis |
+| `prescription_items` | id → prescription_id, medicine_name, dosage, frequency, duration |
+| `lab_tests` | id → patient_id, doctor_id, test_name, dates, result, status |
+| `bills` | id → patient_id, admission_id, total_amount, tax_amount, status |
+| `bill_items` | id → bill_id, description, amount |
+| `wards` | id → ward_name, total_beds |
+| `medicines` | id → name, batch_no, quantity, expiry_date, prices |
+
+---
+
+
+## 📁 Project Structure
+
 ```
-USERS:
-  id → name, email, password_hash, role, phone, department, created_at
-
-PATIENTS:
-  id → patient_code, name, age, gender, blood_group, phone, address, 
-       emergency_contact, medical_history, created_at
-
-APPOINTMENTS:
-  id → patient_id, doctor_id, appointment_date, appointment_time, 
-       department, status, created_at
-
-ADMISSIONS:
-  id → patient_id, doctor_id, ward_id, bed_number, admission_date,
-       discharge_date, diagnosis, notes, status
-
-PRESCRIPTIONS:
-  id → patient_id, doctor_id, visit_date, symptoms, diagnosis, advice, status
-
-PRESCRIPTION_ITEMS:
-  id → prescription_id, medicine_name, dosage, frequency, duration
-
-LAB_TESTS:
-  id → patient_id, doctor_id, test_name, requested_date, result_date,
-       result, report_file, status
-
-BILLS:
-  id → patient_id, admission_id, total_amount, tax_amount, status, created_at
-
-BILL_ITEMS:
-  id → bill_id, description, amount
-
-WARDS:
-  id → ward_name, total_beds, created_at
-
-MEDICINES:
-  id → name, batch_no, quantity, expiry_date, purchase_price, selling_price
+SarangKadam_125_TYCSEA_HospitalManagementSystem/
+│
+├── 📁 hospital_management/          # PHP Web Application
+│   ├── 📁 admin/                    # Admin module
+│   │   ├── index.php               # Admin dashboard
+│   │   ├── users.php               # User management
+│   │   ├── user_form.php           # Add/Edit user
+│   │   └── wards.php               # Ward management
+│   ├── 📁 auth/                     # Authentication
+│   │   ├── login.php               # Login page
+│   │   └── logout.php              # Logout handler
+│   ├── 📁 billing/                  # Billing module
+│   │   ├── bills.php               # Bills list
+│   │   ├── bill_form.php           # Create bill
+│   │   └── invoice.php             # Print invoice
+│   ├── 📁 config/                   # Configuration
+│   │   └── database.php            # DB connection
+│   ├── 📁 doctor/                   # Doctor module
+│   │   ├── index.php               # Doctor dashboard
+│   │   ├── appointments.php        # View appointments
+│   │   ├── prescriptions.php       # Prescriptions list
+│   │   ├── prescription_form.php   # Create prescription
+│   │   └── lab_requests.php        # Request lab tests
+│   ├── 📁 includes/                 # Shared components
+│   │   ├── header.php              # Page header
+│   │   ├── footer.php              # Page footer
+│   │   ├── sidebar.php             # Navigation sidebar
+│   │   ├── auth_check.php          # Auth middleware
+│   │   └── functions.php           # Helper functions
+│   ├── 📁 lab/                      # Lab module
+│   │   ├── index.php               # Lab dashboard
+│   │   ├── tests.php               # Test requests
+│   │   └── test_result.php         # Enter results
+│   ├── 📁 nurse/                    # Nurse module
+│   │   ├── index.php               # Nurse dashboard
+│   │   └── patient_care.php        # Patient care notes
+│   ├── 📁 pharmacist/               # Pharmacy module
+│   │   ├── index.php               # Pharmacy dashboard
+│   │   ├── prescriptions.php       # Pending prescriptions
+│   │   ├── inventory.php           # Medicine inventory
+│   │   └── medicine_form.php       # Add/Edit medicine
+│   ├── 📁 receptionist/             # Reception module
+│   │   ├── index.php               # Reception dashboard
+│   │   ├── patients.php            # Patient list
+│   │   ├── patient_form.php        # Register patient
+│   │   ├── appointments.php        # Appointments list
+│   │   ├── appointment_form.php    # Book appointment
+│   │   ├── admissions.php          # Admissions list
+│   │   └── admission_form.php      # Admit patient
+│   ├── 📁 assets/                   # Static assets
+│   │   ├── css/style.css           # Custom styles
+│   │   └── js/main.js              # Custom scripts
+│   ├── 📁 uploads/                  # File uploads
+│   │   └── lab_reports/            # Lab report PDFs
+│   ├── db.sql                       # Database schema
+│   └── index.php                    # Entry point
+│
+├── 📁 docs/                         # Documentation
+│   ├── DATABASE_DIAGRAMS.md        # Detailed ER diagrams
+│   └── README_PROFESSIONAL.md      # Extended documentation
+│
+├── 📄 SQL Scripts (01-26)           # Modular SQL files
+│   ├── 01_database_init.sql        # Database initialization
+│   ├── 02_patients_table.sql       # Patients table
+│   ├── 03_departments_staff.sql    # Departments & Staff
+│   ├── ...                         # More SQL scripts
+│   └── 26_comprehensive_test.sql   # System tests
+│
+├── db.sql                           # Combined database schema
+├── README.md                        # This file
+├── LICENSE                          # MIT License
+├── CONTRIBUTING.md                  # Contribution guidelines
+├── SECURITY.md                      # Security policy
+└── CHANGELOG.md                     # Version history
 ```
 
 ---
 
-## ⚙️ Setup Instructions
+## 🚀 Installation
 
 ### Prerequisites
-1. Install [XAMPP](https://www.apachefriends.org/) (Apache + MySQL + PHP 8+)
-2. Web browser (Chrome, Firefox, Edge)
 
-### Installation Steps
+- ✅ XAMPP/WAMP/LAMP with PHP 8.0+
+- ✅ MySQL 5.7+ or MariaDB
+- ✅ Web browser (Chrome, Firefox, Edge)
 
-**Step 1: Download/Clone Project**
+### Step-by-Step Setup
+
+#### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/sarang-sketch/SarangKadam_125_TYCSEA_HospitalManagementSystem-.git
+git clone https://github.com/sarang-sketch/SarangKadam_125_TYCSEA_HospitalManagementSystem.git
 ```
 
-**Step 2: Copy to XAMPP**
+#### 2️⃣ Copy to Web Server
+```bash
+# For XAMPP (Windows)
+xcopy hospital_management C:\xampp\htdocs\hospital_management\ /E /I
+
+# For Linux
+cp -r hospital_management /var/www/html/
 ```
-Copy folder to: C:\xampp\htdocs\SarangKadam_125_TYCSEA_HospitalManagementSystem
-```
 
-**Step 3: Start XAMPP Services**
-- Open XAMPP Control Panel
-- Start **Apache**
-- Start **MySQL**
+#### 3️⃣ Create Database
+1. Open phpMyAdmin: `http://localhost/phpmyadmin`
+2. Create new database: `hospital_management`
+3. Import `hospital_management/db.sql` file
 
-**Step 4: Import Database**
-1. Open http://localhost/phpmyadmin
-2. Click **"Import"** tab
-3. Select `db.sql` file
-4. Click **"Go"**
-
-**Step 5: Configure Database** (if needed)
-Edit `config/database.php`:
+#### 4️⃣ Configure Database Connection
+Edit `hospital_management/config/database.php`:
 ```php
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
@@ -638,103 +600,121 @@ define('DB_PASS', '');
 define('DB_NAME', 'hospital_management');
 ```
 
-**Step 6: Access System**
+#### 5️⃣ Access the Application
 ```
-http://localhost/SarangKadam_125_TYCSEA_HospitalManagementSystem
+http://localhost/hospital_management
 ```
 
 ---
 
-## 🔑 Login Credentials
+## 🔐 Default Login Credentials
 
 | Role | Email | Password |
-|------|-------|----------|
-| Admin | admin@hospital.com | Admin@123 |
-| Doctor | doctor1@hospital.com | Admin@123 |
-| Doctor | doctor2@hospital.com | Admin@123 |
-| Nurse | nurse@hospital.com | Admin@123 |
-| Receptionist | reception@hospital.com | Admin@123 |
-| Lab Tech | lab@hospital.com | Admin@123 |
-| Pharmacist | pharmacy@hospital.com | Admin@123 |
+|:-----|:------|:---------|
+| **Admin** | admin@hospital.com | Admin@123 |
+| **Doctor** | doctor1@hospital.com | Admin@123 |
+| **Doctor** | doctor2@hospital.com | Admin@123 |
+| **Nurse** | nurse@hospital.com | Admin@123 |
+| **Receptionist** | reception@hospital.com | Admin@123 |
+| **Lab Tech** | lab@hospital.com | Admin@123 |
+| **Pharmacist** | pharmacy@hospital.com | Admin@123 |
 
 ---
 
-## 📖 Usage Guide
+## 📝 SQL Query Examples
 
-### Admin Functions
-1. Login → Dashboard with statistics
-2. User Management → Add/Edit/Delete users
-3. Ward Management → Configure wards and beds
-
-### Receptionist Functions
-1. Register new patients
-2. Book appointments
-3. Manage admissions/discharges
-4. Generate bills
-
-### Doctor Functions
-1. View appointments
-2. Create prescriptions
-3. Request lab tests
-4. View patient history
-
-### Pharmacist Functions
-1. View pending prescriptions
-2. Dispense medicines
-3. Manage inventory
-
----
-
-## 📁 Project Structure
-
+### Patient Registration
+```sql
+INSERT INTO patients (patient_code, name, age, gender, blood_group, phone, address)
+VALUES ('PT202500001', 'John Doe', 35, 'male', 'A+', '9876543210', '123 Main St');
 ```
-SarangKadam_125_TYCSEA_HospitalManagementSystem/
-├── admin/              # Admin module
-├── doctor/             # Doctor module
-├── nurse/              # Nurse module
-├── receptionist/       # Receptionist module
-├── lab/                # Lab technician module
-├── pharmacist/         # Pharmacist module
-├── billing/            # Billing module
-├── auth/               # Authentication
-├── config/             # Database config
-├── includes/           # Shared components
-├── assets/             # CSS, JS, images
-├── uploads/            # File uploads
-├── db.sql              # Database schema
-├── requirements.txt    # Requirements
-├── README.md           # Documentation
-└── Project_Report.pdf  # Final report
+
+### Book Appointment
+```sql
+INSERT INTO appointments (patient_id, doctor_id, appointment_date, appointment_time, department)
+VALUES (1, 2, '2025-12-10', '10:00:00', 'Cardiology');
+```
+
+### View Today's Appointments
+```sql
+SELECT a.*, p.name as patient_name, u.name as doctor_name
+FROM appointments a
+JOIN patients p ON a.patient_id = p.id
+JOIN users u ON a.doctor_id = u.id
+WHERE a.appointment_date = CURDATE()
+ORDER BY a.appointment_time;
+```
+
+### Generate Bill
+```sql
+INSERT INTO bills (patient_id, admission_id, total_amount, tax_amount, status)
+VALUES (1, 1, 5000.00, 250.00, 'unpaid');
+```
+
+### Check Medicine Stock
+```sql
+SELECT name, quantity, expiry_date 
+FROM medicines 
+WHERE quantity < 50 OR expiry_date < DATE_ADD(CURDATE(), INTERVAL 30 DAY)
+ORDER BY quantity ASC;
 ```
 
 ---
 
-## 📊 Sample Data Included
+## 📚 Documentation
 
-- 7 Users (Admin, 2 Doctors, Nurse, Receptionist, Lab Tech, Pharmacist)
-- 10 Sample Patients
-- 5 Wards (General, ICU, Pediatric, Maternity, Emergency)
-- Sample Appointments, Prescriptions, Lab Tests, Bills
-- 12 Medicines in Inventory
+| Document | Description |
+|:---------|:------------|
+| [docs/DATABASE_DIAGRAMS.md](docs/DATABASE_DIAGRAMS.md) | Detailed ER diagrams and schema |
+| [docs/README_PROFESSIONAL.md](docs/README_PROFESSIONAL.md) | Extended documentation |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute |
+| [SECURITY.md](SECURITY.md) | Security policy |
+| [CHANGELOG.md](CHANGELOG.md) | Version history |
 
 ---
 
-## 👨‍💻 Developer Information
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👨‍💻 Author
+
+<div align="center">
+
+**Sarang Kadam**
 
 | Field | Details |
-|-------|---------|
-| **Name** | Sarang Kadam |
-| **Roll No** | 125 |
-| **Class** | TY CSE (A) |
-| **Project** | Hospital Management System |
-| **Subject** | Database Management System |
+|:------|:--------|
+| Roll No | 125 |
+| Class | TY CSE (A) |
+| Subject | Database Management System |
+| GitHub | [@sarang-sketch](https://github.com/sarang-sketch) |
+
+</div>
 
 ---
 
-## 🔗 Repository
+<div align="center">
 
-**GitHub:** https://github.com/sarang-sketch/SarangKadam_125_TYCSEA_HospitalManagementSystem-.git
+**⭐ Star this repository if you found it helpful!**
 
----
+[![GitHub stars](https://img.shields.io/github/stars/sarang-sketch/SarangKadam_125_TYCSEA_HospitalManagementSystem?style=social)](https://github.com/sarang-sketch/SarangKadam_125_TYCSEA_HospitalManagementSystem/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/sarang-sketch/SarangKadam_125_TYCSEA_HospitalManagementSystem?style=social)](https://github.com/sarang-sketch/SarangKadam_125_TYCSEA_HospitalManagementSystem/network/members)
 
-© 2025 Hospital Management System | Sarang Kadam | Roll No: 125 | TY CSE (A)
+Made with ❤️ for DBMS Project
+
+</div>
